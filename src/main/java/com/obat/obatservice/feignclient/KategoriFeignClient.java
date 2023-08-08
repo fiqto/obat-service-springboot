@@ -11,9 +11,9 @@ import java.util.List;
 @RestController
 @FeignClient(name = "kategori", url = "https://crud-kategori-production.up.railway.app/") // iki isi en sesuai nama app microservice nak eureka e
 public interface KategoriFeignClient {
-    @GetMapping("/all")
+    @GetMapping("/kategori/all")
     List<KategoriDTO> getAllKategori();
 
-    @GetMapping("/{id}")
+    @GetMapping("/kategori/{id}")
     KategoriDTO getKategoriById(@PathVariable Long id);
 }

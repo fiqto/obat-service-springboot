@@ -10,9 +10,9 @@ import java.util.List;
 @RestController
 @FeignClient(name = "supplier", url = "https://supplier-service-production.up.railway.app/") // iki isi en sesuai nama app microservice nak eureka e
 public interface SupplierFeignClient {
-    @GetMapping("/all") //
+    @GetMapping("/supplier/all")
     List<SupplierDTO> getAllSupplier();
 
-    @GetMapping("/{id}")
+    @GetMapping("/supplier/{id}")
     SupplierDTO getSupplierById(@PathVariable Long id);
 }
