@@ -1,7 +1,6 @@
 package com.obat.obatservice.feignclient;
 import com.obat.obatservice.model.SupplierDTO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
