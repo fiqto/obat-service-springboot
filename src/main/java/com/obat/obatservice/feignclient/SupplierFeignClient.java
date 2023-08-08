@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@FeignClient(name = "supplier", url = "a") // iki isi en sesuai nama app microservice nak eureka e
+@FeignClient(name = "supplier", url = "https://supplier-service-production.up.railway.app/") // iki isi en sesuai nama app microservice nak eureka e
 public interface SupplierFeignClient {
-    @GetMapping("/supplier/all") //
+    @GetMapping("/all") //
     List<SupplierDTO> getAllSupplier();
 
-    @GetMapping("/supplier/{id}")
+    @GetMapping("/{id}")
     SupplierDTO getSupplierById(@PathVariable Long id);
 }
