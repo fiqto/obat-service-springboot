@@ -1,7 +1,5 @@
 package com.obat.obatservice.controller;
 
-import com.obat.obatservice.feignclient.KategoriFeignClient;
-import com.obat.obatservice.feignclient.SupplierFeignClient;
 import com.obat.obatservice.model.ObatDTO;
 import com.obat.obatservice.model.ObatHistoryDTO;
 import com.obat.obatservice.repository.ObatRepository;
