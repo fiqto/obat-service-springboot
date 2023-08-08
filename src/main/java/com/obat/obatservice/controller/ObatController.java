@@ -1,5 +1,7 @@
 package com.obat.obatservice.controller;
 
+import com.obat.obatservice.feignclient.KategoriFeignClient;
+import com.obat.obatservice.feignclient.SupplierFeignClient;
 import com.obat.obatservice.model.ObatDTO;
 import com.obat.obatservice.model.ObatHistoryDTO;
 import com.obat.obatservice.repository.ObatRepository;
@@ -17,18 +19,12 @@ public class ObatController {
     private final ObatService obatService;
     private final ObatRepository obatRepository;
 
-    private final SupplierFeignClient supplierFeignClient;
-
-    private final KategoriFeignClient kategoriFeignClient;
-
     private final ModelMapper modelMapper;
 
     @Autowired
-    public ObatController(ObatService obatService, ObatRepository obatRepository, SupplierFeignClient supplierFeignClient, KategoriFeignClient kategoriFeignClient, ModelMapper modelMapper) {
+    public ObatController(ObatService obatService, ObatRepository obatRepository, ModelMapper modelMapper) {
         this.obatService = obatService;
         this.obatRepository = obatRepository;
-        this.supplierFeignClient = supplierFeignClient;
-        this.kategoriFeignClient = kategoriFeignClient;
         this.modelMapper = modelMapper;
     }
 
